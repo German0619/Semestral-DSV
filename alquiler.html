@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alquiler de Motors Value</title>
+    <link rel="stylesheet" href="Estilos/alquiler.css">
+    <script src="java.js/alquiler.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Alquiler de Motors Value</h1>
+        <nav class="navbar">
+            <a href="inicio.html" class="nav-item">INICIO</a>
+            <a href="venta.html" class="nav-item">VENTA</a>
+            <a href="alquiler.html" class="nav-item active">ALQUILER</a>
+            <a href="solicitud.html" class="nav-item">SOLICITUD</a>
+            <a href="subasta.html" class="nav-item">SUBASTA</a>
+        </nav>
+        <div class="car-navbar">
+            <a href="#!" class="car-nav-item" onclick="showFleet('Sedán')">Sedán</a>
+            <a href="#!" class="car-nav-item" onclick="showFleet('SUV')">SUV</a>
+            <a href="#!" class="car-nav-item" onclick="showFleet('Camioneta')">Camioneta</a>
+        </div>
+        <div class="fleet-list" id="fleet">
+            <!-- La lista de flota se llenará dinámicamente -->
+        </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <div class="modal-header">
+                    <h2 id="car-model"></h2>
+                </div>
+                <div class="modal-body">
+                    <p id="car-price"></p>
+                    <p id="car-details"></p>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn" onclick="closeModal()">Regresar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

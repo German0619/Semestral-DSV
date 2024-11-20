@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../Imagenes/freepik__candid-image-photography-natural-textures-highly-r__58932.jpeg');
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    height: 550px;
+    border-radius: 8px;
+    background-image: url('../Imagenes/fondoContainer.jpg');
+    text-align: center;
+    width: 1200px;
+    position: relative;
+}
+.fondoInicio {
+    margin-left: 140px;
+    position: absolute; /* Para colocar la imagen en una capa específica */
+    top: 150px; /* Ajusta según la posición deseada debajo de h1 */
+    left: 0;
+    width: 75%;
+    height: 350px; /* Ajusta la altura según lo que necesites */
+    z-index: 0; /* Asegura que esté detrás del texto h2 y h3 */
+    overflow: hidden; /* Oculta cualquier desbordamiento */
+    margin-top: -10px;
+    opacity: 0.4;
+}
+
+.fondoInicio img {
+    border-radius: 3%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: relative;
+}
+h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2{
+    margin-top: 25px;
+    margin-bottom: 0%;
+    position: relative;
+    z-index: 1;
+    color: rgb(237, 224, 224);
+    font-family: 'Times New Roman', Times, serif;
+}
+h3{
+    margin-top: 0px;
+    margin-bottom: 0%;
+    position: relative;
+    z-index: 1;
+    color: rgb(237, 224, 224);
+    font-family: 'Times New Roman', Times, serif;
+}
+.parrafo{
+    margin-top: 50px;
+    margin-left: 20%;
+    margin-right: 20%;
+    text-align: justify;
+}
+p{
+    position: relative;
+    z-index: 1;
+    color: rgb(237, 224, 224);
+    font-size: x-large;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-around;
+    background-color: #4a4a4a;
+    padding: 5px;
+    border-radius: 10px;
+    margin: 20px;
+    clip-path: polygon(0% 0%, 5% 50%, 0% 100%, 100% 100%, 95% 50%, 100% 0%);
+}
+
+.nav-item {
+    position: relative;
+    display: inline-block;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #5f5f5f;
+    font-weight: bold;
+    clip-path: polygon(10% 0%, 90% 0%, 100% 50%, 90% 100%, 10% 100%, 0% 50%);
+    transition: background-color 0.3s;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.nav-item:hover {
+    background-color: #7a7a7a;
+}
+
+.nav-item.active{
+    background-color: #3e1e1e;
+}
+
+@media (max-width:760px){
+    .navbar{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    ul{
+        flex-direction: column;
+        width: 100%;
+    }
+    li{
+        text-align: center;
+        width: 100%;
+    }
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venta de Motors Value</title>
+    <link rel="stylesheet" href="Estilos/venta.css">
+    <script src="java.js/venta.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Venta de Motors Value</h1>
+        <nav class="navbar">
+            <a href="inicio.html" class="nav-item">INICIO</a>
+            <a href="venta.html" class="nav-item active">VENTA</a>
+            <a href="alquiler.html" class="nav-item">ALQUILER</a>
+            <a href="solicitud.html" class="nav-item">SOLICITUD</a>
+            <a href="subasta.html" class="nav-item">SUBASTA</a>
+        </nav>
+        <div class="car-list">
+            <!-- Aquí se muestran los autos disponibles -->
+            <div class="car-item">
+                <img src="Imagenes/yaris.webp" alt="2019 TOYOTA YARIS" onclick="showCarDetails('2019 TOYOTA YARIS', '$9,900', 'Milla 8', 'TOYOTA', '2019', 'Automática', 'Gasolina', 'Rojo', 'Usado', 'Sedán')">
+                <h2>2019 TOYOTA YARIS</h2>
+                <p>Precio: $9,900 <span class="old-price">$11,000</span></p>
+                <p>Ubicación: Milla 8</p>
+                <p>¡OFERTA!</p>
+                <button class="btn" onclick="showCarDetails('2019 TOYOTA YARIS', '$9,900', 'Milla 8', 'TOYOTA', '2019', 'Automática', 'Gasolina', 'Rojo', 'Usado', 'Sedán')">VER VEHÍCULO</button>
+            </div>
+            <div class="car-item">
+                <img src="Imagenes/Hyundai 2022.webp" alt="2022 Hyundai Accent" onclick="showCarDetails('2022 Hyundai Accent', '$18,000', 'Milla 8', 'Hyundai', '2022', 'Manual', 'Gasolina', 'Blanco', 'Nuevo', 'Sedán')">
+                <h2>2022 Hyundai Accent</h2>
+                <p>Precio: $18,000</p>
+                <p>Ubicación: Milla 8</p>
+                <button class="btn" onclick="showCarDetails('2022 Hyundai Accent', '$18,000', 'Milla 8', 'Hyundai', '2022', 'Manual', 'Gasolina', 'Blanco', 'Nuevo', 'Sedán')">VER VEHÍCULO</button>
+            </div>
+            <div class="car-item">
+                <img src="Imagenes/isuzu 2019.webp" alt="2019 ISUZU D-MAX" onclick="showCarDetails('2019 ISUZU D-MAX', '$11,500', 'Milla 8', 'ISUZU', '2019', 'Automática', 'Diesel', 'Negro', 'Usado', 'Pick-Up')">
+                <h2>2019 ISUZU D-MAX</h2>
+                <p>Precio: $11,500</p>
+                <p>Ubicación: Milla 8</p>
+                <button class="btn" onclick="showCarDetails('2019 ISUZU D-MAX', '$11,500', 'Milla 8', 'ISUZU', '2019', 'Automática', 'Diesel', 'Negro', 'Usado', 'Pick-Up')">VER VEHÍCULO</button>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Ventana Modal para detalles del vehículo -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="modal-header">
+                <h2 id="car-model"></h2>
+            </div>
+            <div class="modal-body">
+                <!-- Información detallada del vehículo -->
+                <p><strong>Precio:</strong> <span id="car-price"></span></p>
+                <p><strong>Ubicación:</strong> <span id="car-location"></span></p>
+                <p><strong>Marca:</strong> <span id="car-brand"></span></p>
+                <p><strong>Año:</strong> <span id="car-year"></span></p>
+                <p><strong>Transmisión:</strong> <span id="car-transmission"></span></p>
+                <p><strong>Combustible:</strong> <span id="car-fuel"></span></p>
+                <p><strong>Color:</strong> <span id="car-color"></span></p>
+                <p><strong>Estado:</strong> <span id="car-condition"></span></p>
+                <p><strong>Carrocería:</strong> <span id="car-body"></span></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
